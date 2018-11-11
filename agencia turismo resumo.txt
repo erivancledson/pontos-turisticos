@@ -1,0 +1,13 @@
+listar com html
+
+http://localhost:3000/pontos
+
+
+formulario de cadastro
+
+http://localhost:3000/pontos/form
+
+
+lista com json
+
+http://localhost:3000/pontos/json

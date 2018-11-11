@@ -1,0 +1,38 @@
+<html>
+
+        <head>
+                <link rel="stylesheet" href="/css/bootstrap.css">
+        
+        </head>
+
+    <body>
+        <table border="1px" class="table table-striped">
+            <thead class="thead-dark">
+             <tr>
+                <th>Url Foto</th>
+                <th>Ponto Turistico</th>
+                <th>Descrição</th>
+                <th>valor</th>
+                <th>Cidade</th>
+                <th>UF</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <% for(var i=0; i<lista.length; i++) {%>
+                    <tr>
+                        <td><%= lista[i].url_foto %></td>
+                        <td><%= lista[i].ponto_turistico %></td>
+                        <td><%= lista[i].descricao %></td>
+                        <td><%= lista[i].valor%></td>
+                        <td><%= lista[i].cidade%></td>
+                        <td><%= lista[i].uf%></td>
+                    </tr>
+                <% } %>
+            </tr>
+        </tbody>
+        </table>
+    </body>
+
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</html>

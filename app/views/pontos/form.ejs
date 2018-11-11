@@ -1,0 +1,90 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+
+</head>
+    <body>
+        <div class='erros'>
+             <%if(errosValidacao){%>
+                <ul>
+                    <%for(var i=0;i<errosValidacao.length;i++){%>
+                        <li><%=errosValidacao[i].param%> - <%=errosValidacao[i].msg%></li>
+                    <%}%>
+                </ul>
+             <%}%>
+        </div>
+
+
+        <form action="/pontos" method="post">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Novo Ponto Turistico</h1>
+                </div>
+                
+                <div class="panel-body">
+        
+        
+                    <div class="form-group">
+                        <label for="cidade" class="col-sm-2 control-label">Cidade:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="cidade" name="cidade" value="<%=ponto.cidade%>" placeholder="Informe o nome da cidade"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="uf" class="col-sm-2 control-label">UF:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="uf" name="uf" value="<%=ponto.uf%>" placeholder="Informe o estado"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="ponto_turistico" class="col-sm-2 control-label">Nome Ponto Turistico:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="ponto_turistico" name="ponto_turistico" value="<%=ponto.ponto_turistico%>" placeholder="Informe o nome do ponto turistico"/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="valor" class="col-sm-2 control-label">Valor:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="valor" name="valor" value="<%=ponto.valor%>" placeholder="Informe o valor"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="url_foto" class="col-sm-2 control-label">Url foto:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="url_foto" name="url_foto" value="<%=ponto.url_foto%>" placeholder="Informe a url da foto"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descricao" class="col-sm-2 control-label">Descrição:</label>
+                        <div class="col-sm-3"> 
+                            <input type="text" class="form-control" id="descricao" name="descricao" value="<%=ponto.descricao%>" placeholder="Informe a descrição"/>
+                        </div>
+                    </div>
+
+
+                  
+
+                    <button type="submit" class="btn btn-primary" value="gravar">Salvar</button>
+
+            </div>  
+            </div>
+         
+        </form>
+
+
+     
+    </body>
+
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+</html>
